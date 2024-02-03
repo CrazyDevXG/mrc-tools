@@ -1,0 +1,10 @@
+
+    ErrorDocument 404 https://app.mrcmiracle.io/error/404
+    ErrorDocument 500 https://app.mrcmiracle.io/error/404
+
+
+ RewriteEngine On
+
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME}.php -f
+      RewriteRule ^(.*?)/?$ $1.php [NC,L]
